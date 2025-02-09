@@ -1,0 +1,13 @@
+<div style="margin-bottom: 10px" *ngFor="let order of orders">
+  <div><strong>Table:</strong> {{ order.tableName }}</div>
+  <div><strong>Room:</strong> {{ order.roomName }}</div>
+  <div *ngFor="let item of order.items">
+    <div><strong>Item Name:</strong> {{ item.name }}</div>
+    <div><strong>Menu Name:</strong> {{ item.menuName }}</div>
+    <div><strong>Status:</strong> {{ item.status }}</div>
+    <div><strong>Issued Time:</strong> {{ item.issuedDateTime || 'Not issued' }}</div>
+    <div><strong>In Progress Time:</strong> {{ item.inProgressDateTime || 'Not started' }}</div>
+    <div><strong>Ready Time:</strong> {{ item.readyDateTime || 'Not ready' }}</div>
+    <div><strong>Delivered Time:</strong> {{ item.deliveredTime || 'Not delivered' }}</div>
+  </div>
+</div>
